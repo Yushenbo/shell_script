@@ -1,9 +1,7 @@
-#########################################################################
-# File Name: conf_sl0.sh
-#########################################################################
 #!/bin/bash
+
 sleep 5
 
-ifconfig sl0 $1 pointopoint $2 up
+ifconfig sl0 $1 pointopoint $2 up &
 
-route add default gw $1
+route add default gw $1 &
